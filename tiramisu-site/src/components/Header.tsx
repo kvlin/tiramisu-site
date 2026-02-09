@@ -17,7 +17,7 @@ const Header = () => {
                         href="/"
                         className="text-2xl md:text-3xl font-semibold text-[#5A3E2B] tracking-wide"
                     >
-                        Dolce Tiramisù
+                        Little Misu
                     </Link>
 
                     {/* Desktop Nav */}

@@ -7,6 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        rose: "hsl(var(--rose))",
+        gold: "hsl(var(--gold))",
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
 
