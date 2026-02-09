@@ -1,26 +1,148 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Tiramisu Artisanal Design System */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Warm cream/ivory base */
+    --background: 40 33% 97%;
+    --foreground: 25 30% 15%;
+
+    /* Card surfaces - soft cream */
+    --card: 40 40% 98%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 40 40% 98%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Primary - Rich espresso brown */
+    --primary: 25 35% 25%;
+    --primary-foreground: 40 33% 97%;
+
+    /* Secondary - Warm caramel */
+    --secondary: 35 40% 90%;
+    --secondary-foreground: 25 35% 20%;
+
+    /* Muted - Soft latte */
+    --muted: 35 25% 92%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Accent - Soft rose pink */
+    --accent: 350 60% 75%;
+    --accent-foreground: 350 45% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 33% 97%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 25 35% 25%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --espresso: 25 35% 18%;
+    --cream: 40 40% 95%;
+    --rose: 350 60% 75%;
+    --rose-light: 350 70% 92%;
+    --blush: 355 55% 85%;
+    --caramel: 30 60% 45%;
+    --gold: 43 80% 50%;
+    --cocoa: 15 30% 35%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(40 33% 97%) 0%, hsl(350 70% 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(40 40% 99%) 0%, hsl(350 60% 97%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(350 60% 75%) 0%, hsl(25 35% 25%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(25 35% 25% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(25 35% 25% / 0.12);
+    --shadow-hover: 0 12px 40px -8px hsl(25 35% 25% / 0.18);
+
+    --sidebar-background: 40 33% 97%;
+    --sidebar-foreground: 25 30% 15%;
+    --sidebar-primary: 25 35% 25%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 35 40% 90%;
+    --sidebar-accent-foreground: 25 35% 20%;
+    --sidebar-border: 35 25% 85%;
+    --sidebar-ring: 38 70% 55%;
+  }
+
+  .dark {
+    --background: 25 25% 10%;
+    --foreground: 40 30% 92%;
+
+    --card: 25 22% 14%;
+    --card-foreground: 40 30% 92%;
+
+    --popover: 25 22% 14%;
+    --popover-foreground: 40 30% 92%;
+
+    --primary: 38 70% 55%;
+    --primary-foreground: 25 25% 10%;
+
+    --secondary: 25 20% 20%;
+    --secondary-foreground: 40 30% 92%;
+
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 38 70% 55%;
+    --accent-foreground: 25 25% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 30% 92%;
+
+    --border: 25 20% 22%;
+    --input: 25 20% 22%;
+    --ring: 38 70% 55%;
+
+    --sidebar-background: 25 25% 10%;
+    --sidebar-foreground: 40 30% 92%;
+    --sidebar-primary: 38 70% 55%;
+    --sidebar-primary-foreground: 25 25% 10%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 40 30% 92%;
+    --sidebar-border: 25 20% 22%;
+    --sidebar-ring: 38 70% 55%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .card-elevated {
+    box-shadow: var(--shadow-card);
+    background: var(--gradient-card);
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-hover);
+  }
 }
