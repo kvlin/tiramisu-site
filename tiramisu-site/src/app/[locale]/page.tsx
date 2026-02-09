@@ -1,15 +1,18 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
+import TiramisuSection from "@/components/TiramisuSection";
 
-export default function Home() {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
   return (
     <>
       <Hero />
-      <section id="tiramisus" className="min-h-screen py-20">
-        <h2 className="text-3xl font-bold">Tiramisus</h2>
-        {/* content */}
-      </section>
-
+      <TiramisuSection locale={locale} />
       <section id="biscuits" className="min-h-screen py-20">
         <h2 className="text-3xl font-bold">Biscuits</h2>
       </section>
