@@ -35,7 +35,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${playfair.variable} ${lato.variable}`}>
       <body>
         <Header />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
@@ -61,5 +61,14 @@ export async function generateMetadata({
       canonical: `${baseUrl}/${locale}`,
       languages,
     },
+    title:
+      locale === "en"
+        ? "Little Misu | Order Online | Sydney"
+        : "Little Misu | 在线定制 | 悉尼",
+
+    description:
+      locale === "en"
+        ? "Authentic Italian tiramisu crafted with premium ingredients"
+        : "传统意大利提拉米苏和和各种甜点，精选食材"
   };
 }

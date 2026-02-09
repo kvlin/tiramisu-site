@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* Brand */}
                     <div>
                         <h3 className="text-2xl font-semibold mb-4">
-                            Dolce Tiramisù
+                            Little Misu
                         </h3>
                         <p className="text-white/70 mb-6 leading-relaxed">
                             Crafting authentic Italian desserts with passion since 1985.
@@ -124,7 +124,7 @@ const Footer = () => {
                 {/* Bottom */}
                 <div className="border-t border-white/20 pt-8 text-center">
                     <p className="text-sm text-white/60">
-                        © {new Date().getFullYear()} Dolce Tiramisù. All rights reserved.
+                        © {new Date().getFullYear()} Little Misu. All rights reserved.
                     </p>
                 </div>
             </div>
