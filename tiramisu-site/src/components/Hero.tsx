@@ -1,7 +1,13 @@
+import ScrollButton from "@/components/ScrollButton";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
+    const scrollToSection = (id: string) => {
+        const el = document.getElementById(id);
+        el?.scrollIntoView({ behavior: "smooth" });
+        history.replaceState(null, "", `#${id}`);
+    };
     return (
         <section className="relative h-[70vh] min-h-[520px] w-full overflow-hidden">
             {/* Background Image */}
@@ -35,24 +41,25 @@ export default function Hero() {
 
                         {/* Buttons */}
                         <div className="flex gap-4">
-                            <Link
-                                href="#tiramisus"
+
+                            <ScrollButton
+                                targetId="tiramisus"
                                 className="rounded-lg bg-primary text-primary-foreground px-6 py-3 font-medium hover:opacity-90 transition"
                             >
                                 Explore Collection →
-                            </Link>
+                            </ScrollButton>
 
-                            <Link
-                                href="#about"
+                            <ScrollButton
+                                targetId="about"
                                 className="rounded-lg border border-border px-6 py-3 font-medium hover:bg-muted transition"
                             >
                                 Our Story
-                            </Link>
+                            </ScrollButton>
                         </div>
 
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
