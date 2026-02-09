@@ -8,85 +8,71 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b">
-            <div className="mx-auto max-w-7xl px-4 py-4">
-                <nav className="flex items-center justify-between">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-[#F4EFEA] border-b border-[#E5DED6]">
+            <div className="mx-auto max-w-7xl px-6">
+                <nav className="flex h-16 items-center justify-between">
+
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="text-2xl md:text-3xl font-semibold text-primary"
+                        className="text-2xl md:text-3xl font-semibold text-[#5A3E2B] tracking-wide"
                     >
                         Dolce Tiramisù
                     </Link>
 
-                    {/* Desktop Navigation */}
-                    <ul className="hidden md:flex items-center gap-8">
-                        <li>
-                            <a href="#products" className="hover:text-primary transition-colors font-medium">
-                                Products
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#biscuits" className="hover:text-primary transition-colors font-medium">
-                                Biscuits
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#crisps" className="hover:text-primary transition-colors font-medium">
-                                Almond Crisps
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#about" className="hover:text-primary transition-colors font-medium">
-                                About
-                            </a>
-                        </li>
+                    {/* Desktop Nav */}
+                    <ul className="hidden md:flex items-center gap-10 text-sm font-medium text-[#6B4F3A]">
+                        {["Products", "Biscuits", "Almond Crisps", "About"].map((item) => (
+                            <li key={item}>
+                                <a
+                                    href={`#${item.toLowerCase().replace(" ", "")}`}
+                                    className="hover:text-[#5A3E2B] transition-colors duration-200"
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
 
-                    {/* Right Side Icons */}
+                    {/* Right Side */}
                     <div className="flex items-center gap-4">
                         {/* Cart */}
                         <button className="relative p-2">
-                            <ShoppingBag className="h-5 w-5" />
-                            <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-black text-white text-xs flex items-center justify-center font-semibold">
+                            <ShoppingBag className="h-5 w-5 text-[#5A3E2B]" />
+                            <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-pink-400 text-white text-[10px] flex items-center justify-center font-semibold">
                                 0
                             </span>
                         </button>
 
-                        {/* Mobile Menu Toggle */}
+                        {/* Mobile Toggle */}
                         <button
-                            className="md:hidden p-2"
+                            className="md:hidden p-2 text-[#5A3E2B]"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
-                            {isMenuOpen ? (
-                                <X className="h-5 w-5" />
-                            ) : (
-                                <Menu className="h-5 w-5" />
-                            )}
+                            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                         </button>
                     </div>
                 </nav>
 
-                {/* Mobile Navigation */}
-                {isMenuOpen && (
-                    <div className="md:hidden mt-4 border-t pt-4">
-                        <ul className="flex flex-col gap-4">
-                            {["Products", "Biscuits", "Almond Crisps", "About"].map(
-                                (item) => (
-                                    <li key={item}>
-                                        <a
-                                            href={`#${item.toLowerCase().replace(" ", "")}`}
-                                            className="block font-medium hover:text-primary transition-colors"
-                                            onClick={() => setIsMenuOpen(false)}
-                                        >
-                                            {item}
-                                        </a>
-                                    </li>
-                                )
-                            )}
-                        </ul>
-                    </div>
-                )}
+                {/* Mobile Menu */}
+                <div
+                    className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? "max-h-96 pb-4 pt-4 border-t border-[#E5DED6]" : "max-h-0"
+                        }`}
+                >
+                    <ul className="flex flex-col gap-5 text-sm font-medium text-[#6B4F3A]">
+                        {["Products", "Biscuits", "Almond Crisps", "About"].map((item) => (
+                            <li key={item}>
+                                <a
+                                    href={`#${item.toLowerCase().replace(" ", "")}`}
+                                    className="block hover:text-[#5A3E2B] transition-colors"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </header>
     );
