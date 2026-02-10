@@ -22,7 +22,7 @@ const Header = () => {
 
                     {/* Desktop Nav */}
                     <ul className="hidden md:flex items-center gap-10 text-sm font-medium text-[#6B4F3A]">
-                        {["Tiramisus", "Biscuits", "Almond Crisps", "About"].map((item) => (
+                        {["Tiramisus", "Wafer Rolls", "Almond Crisps", "About"].map((item) => (
                             <li key={item}>
                                 <a
                                     href={`#${item.toLowerCase().replace(" ", "")}`}
@@ -60,7 +60,7 @@ const Header = () => {
                         }`}
                 >
                     <ul className="flex flex-col gap-5 text-sm font-medium text-[#6B4F3A]">
-                        {["Tiramisus", "Biscuits", "Almond Crisps", "About"].map((item) => (
+                        {["Tiramisus", "Wafer Rolls", "Almond Crisps", "About"].map((item) => (
                             <li key={item}>
                                 <a
                                     href={`#${item.toLowerCase().replace(" ", "")}`}

@@ -10,7 +10,9 @@ type ProductCardProps = {
         label: string;
         value: number;
     }[];
-    price?: number; // fallback single price
+    price?: number;
+    imageHeight?: string;
+
 };
 
 export default function ProductCard({
@@ -19,7 +21,8 @@ export default function ProductCard({
     image,
     slug,
     badge,
-    prices
+    prices,
+    imageHeight
 }: ProductCardProps) {
     return (
         <div className="group rounded-2xl bg-white backdrop-blur-sm 
@@ -27,8 +30,7 @@ export default function ProductCard({
         overflow-hidden transition-all duration-500 
         hover:shadow-2xl hover:-translate-y-2">
 
-            {/* Image (dominant ~70%) */}
-            <div className="relative h-[420px] overflow-hidden">
+            <div className={`relative overflow-hidden ${imageHeight ?? "h-[420px]"}`}>
                 {badge && (
                     <span className="absolute top-5 left-5 z-10 rounded-full bg-gold px-4 py-1 text-xs font-semibold text-accent-foreground">
                         {badge}
@@ -44,12 +46,12 @@ export default function ProductCard({
             </div>
 
             {/* Content */}
-            <div className="p-8">
-                <h3 className="font-display text-2xl font-semibold mb-6">
+            <div className="px-6 py-4">
+                <h3 className="font-display text-2xl font-semibold mb-1">
                     {name}
                 </h3>
 
-                <div className="mt-6 min-h-[70px] flex flex-col justify-center">
+                <div className="mt-2 min-h-[30px] flex flex-col justify-center">
                     {prices && prices.length > 0 ? (
                         <div className="space-y-2">
                             {prices.map((p, index) => (

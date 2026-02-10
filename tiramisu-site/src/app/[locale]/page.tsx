@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import TiramisuSection from "@/components/TiramisuSection";
+import WaferRollSection from "@/components/WaferRollSection";
 
 export default async function Page({
   params,
@@ -13,6 +14,8 @@ export default async function Page({
     <>
       <Hero />
       <TiramisuSection locale={locale} />
+      <WaferRollSection locale={locale} />
+
       <section id="biscuits" className="min-h-screen py-20">
         <h2 className="text-3xl font-bold">Biscuits</h2>
       </section>
