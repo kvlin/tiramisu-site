@@ -10,8 +10,8 @@ export default function TiramisuSection({ locale }: Props) {
 
     const subtitle =
         locale === "cn"
-            ? "每日新鲜制作，采用传统配方与优质意大利原料。"
-            : "Each creation is handcrafted daily using time-honored recipes and the finest imported Italian ingredients.";
+            ? "每日新鲜制作，采用传统配方与优质原料。"
+            : "Each creation is handcrafted daily using traditional recipes and the freshest ingredients we can find.";
 
     const products = [
         {

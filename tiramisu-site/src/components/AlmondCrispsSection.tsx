@@ -15,7 +15,7 @@ export default function AlmondCrispsSection({ locale }: Props) {
 
     const product = {
         name: locale === "cn" ? "杏仁瓦片" : "Almond Crisps",
-        price: 8.5,
+        price: 10,
         image: "/images/almond-crisps1.jpg",
         slug: "almond-crisps",
     };
