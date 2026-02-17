@@ -27,8 +27,13 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t tiramisu-site ./tiramisu-site
-          docker tag tiramisu-site:latest ${{ secrets.ECR_REGISTRY }}/tiramisu-site:latest
+          IMAGE=${{ secrets.ECR_REGISTRY }}/tiramisu-site:latest
+          docker build -t $IMAGE ./tiramisu-site
+          docker push $IMAGE
+      
+      - name: Debug image name
+        run: |
+          echo "Image will be: ${{ secrets.ECR_REGISTRY }}/tiramisu-site:latest"
 
       - name: Push image
         run: |
