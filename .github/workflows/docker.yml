@@ -28,11 +28,11 @@ jobs:
       - name: Build image
         run: |
           docker build -t tiramisu-site ./tiramisu-site
-          docker tag tiramisu-site ${{ secrets.ECR_REGISTRY }}/tiramisu-site
+          docker tag tiramisu-site:latest ${{ secrets.ECR_REGISTRY }}/tiramisu-site:latest
 
       - name: Push image
         run: |
-          docker push ${{ secrets.ECR_REGISTRY }}/tiramisu-site
+          docker push ${{ secrets.ECR_REGISTRY }}/tiramisu-site:latest
 
       - name: Force new ECS deployment
         run: |
