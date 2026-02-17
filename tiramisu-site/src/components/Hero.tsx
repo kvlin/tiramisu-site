@@ -31,7 +31,7 @@ export default function Hero() {
                         {/* Heading */}
                         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
                             Authentic <br />
-                            <span className="text-accent">Tiramisù</span>
+                            <span className="text-accent">Tiramisu</span>
                         </h1>
 
                         {/* Description */}
@@ -49,12 +49,6 @@ export default function Hero() {
                                 Explore Collection →
                             </ScrollButton>
 
-                            <ScrollButton
-                                targetId="about"
-                                className="rounded-lg border border-border px-6 py-3 font-medium hover:bg-muted transition"
-                            >
-                                Our Story
-                            </ScrollButton>
                         </div>
 
                     </div>
