@@ -43,5 +43,5 @@ jobs:
         run: |
           aws ecs update-service \
             --cluster tiramisu-cluster \
-            --service tiramisu-service \
+            --service tiramisu-site-1-service-i7dhjfs9 \
             --force-new-deployment
