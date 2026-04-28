@@ -61,6 +61,13 @@ export async function generateMetadata({
       canonical: `${baseUrl}/${locale}`,
       languages,
     },
+
+    icons: {
+      icon: "/logo.png",
+      shortcut: "/logo.png",
+      apple: "/logo.png",
+    },
+
     title:
       locale === "en"
         ? "Little Misu | Order Online | Sydney"
@@ -69,6 +76,7 @@ export async function generateMetadata({
     description:
       locale === "en"
         ? "Authentic Italian tiramisu crafted with premium ingredients"
-        : "传统意大利提拉米苏和和各种甜点，精选食材"
+        : "传统意大利提拉米苏和各种甜点，精选食材",
   };
 }
+

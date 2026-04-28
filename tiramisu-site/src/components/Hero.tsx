@@ -40,13 +40,20 @@ export default function Hero() {
                         </p>
 
                         {/* Buttons */}
-                        <div className="flex gap-4">
+                        <div className="flex flex-col gap-4 sm:flex-row">
 
                             <ScrollButton
                                 targetId="tiramisus"
                                 className="rounded-lg bg-primary text-primary-foreground px-6 py-3 font-medium hover:opacity-90 transition"
                             >
-                                Explore Collection →
+                                Explore Collection
+                            </ScrollButton>
+
+                            <ScrollButton
+                                targetId="availability"
+                                className="rounded-lg border border-white/30 bg-white/90 text-foreground px-6 py-3 font-medium hover:bg-white transition"
+                            >
+                                Find Us
                             </ScrollButton>
 
                         </div>
