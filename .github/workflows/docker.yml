@@ -42,6 +42,6 @@ jobs:
       - name: Force new ECS deployment
         run: |
           aws ecs update-service \
-            --cluster tiramisu-cluster \
+            --cluster cluster \
             --service tiramisu-1-service-3hwasf6j \
             --force-new-deployment
