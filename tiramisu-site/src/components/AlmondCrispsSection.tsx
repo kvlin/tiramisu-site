@@ -23,7 +23,7 @@ export default function AlmondCrispsSection({ locale }: Props) {
     return (
         <section
             id="almond-crisps"
-            className="scroll-mt-24 py-36 bg-cream"
+            className="scroll-mt-24 py-12 sm:py-16 lg:py-20 bg-cream"
         >
             <div className="mx-auto max-w-5xl px-8">
 

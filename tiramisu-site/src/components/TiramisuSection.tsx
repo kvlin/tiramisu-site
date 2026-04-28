@@ -6,7 +6,7 @@ type Props = {
 
 export default function TiramisuSection({ locale }: Props) {
     const title =
-        locale === "cn" ? "招牌提拉米苏" : "Signature Tiramisù";
+        locale === "cn" ? "招牌提拉米苏" : "Signature Tiramisu";
 
     const subtitle =
         locale === "cn"
