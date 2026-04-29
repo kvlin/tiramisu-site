@@ -33,11 +33,11 @@ const Header = () => {
                         />
                     </a>
                     {/* Desktop Nav */}
-                    <ul className="hidden md:flex items-center gap-10 text-sm font-medium text-[#6B4F3A]">
+                    <ul className="hidden md:flex items-center gap-10 text-base font-semibold text-[#6B4F3A]">
                         <li className="group relative">
                             <button
                                 type="button"
-                                className="inline-flex items-center gap-2 hover:text-[#5A3E2B] transition-colors duration-200"
+                                className="inline-flex items-center gap-2 text-base hover:text-[#5A3E2B] transition-colors duration-200"
                             >
                                 Products
                                 <span className="text-xs">▾</span>
@@ -91,7 +91,7 @@ const Header = () => {
                     className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? "max-h-96 pb-4 pt-4 border-t border-[#E5DED6]" : "max-h-0"
                         }`}
                 >
-                    <ul className="flex flex-col gap-5 text-sm font-medium text-[#6B4F3A]">
+                    <ul className="flex flex-col gap-5 text-base font-medium text-[#6B4F3A]">
                         <li>
                             <button
                                 className="flex w-full items-center justify-between text-left hover:text-[#5A3E2B] transition-colors"
@@ -119,15 +119,6 @@ const Header = () => {
                                     ))}
                                 </ul>
                             </div>
-                        </li>
-                        <li>
-                            <a
-                                href="#order-by-email"
-                                className="block hover:text-[#5A3E2B] transition-colors"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Order
-                            </a>
                         </li>
                         <li>
                             <a

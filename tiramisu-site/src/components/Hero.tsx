@@ -26,10 +26,10 @@ export default function Hero() {
             <div className="relative z-10 flex h-full items-center">
                 <div className="mx-auto max-w-7xl w-full px-6">
 
-                    <div className="max-w-xl mt-64">
+                    <div className="max-w-xl mt-64 pb-12 sm:pb-0">
 
                         {/* Heading */}
-                        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
+                        <h1 className="font-display text-6xl md:text-2xl lg:text-8xl font-semibold leading-tight mb-6">
                             Authentic <br />
                             <span className="text-accent">Tiramisu</span>
                         </h1>

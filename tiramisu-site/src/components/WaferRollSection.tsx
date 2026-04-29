@@ -6,12 +6,12 @@ type Props = {
 
 export default function WaferRollSection({ locale }: Props) {
     const title =
-        locale === "cn" ? "手工蛋卷" : "Artisan Wafer Rolls";
+        locale === "cn" ? "手工蛋卷" : "Wafer Rolls";
 
     const subtitle =
         locale === "cn"
             ? "酥脆轻盈，经典与创新口味结合。"
-            : "Light, crisp and delicately rolled. Crafted in classic and modern flavours.";
+            : "Light and crispy wafer rolls, perfect for sharing or a quick snack.";
 
     const products = [
         {
