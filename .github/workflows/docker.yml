@@ -12,7 +12,7 @@ env:
   ECS_CLUSTER: default
   ECS_SERVICE: tiramisu-1-service-3hwasf6j
   TASK_DEFINITION: tiramisu-1
-  CONTAINER_NAME: tiramisu-site
+  CONTAINER_NAME: tiramisu
 
 jobs:
   deploy:
