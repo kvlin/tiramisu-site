@@ -72,7 +72,7 @@ export default function TiramisuSection({ locale }: Props) {
     return (
         <section
             id="tiramisus"
-            className="scroll-mt-24 py-36 bg-rose-light"
+            className="scroll-mt-24 py-24 bg-rose-light"
         >
             <div className="mx-auto max-w-7xl px-8">
 
@@ -88,7 +88,7 @@ export default function TiramisuSection({ locale }: Props) {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     {products.map((product, index) => (
                         <ProductCard key={index} {...product} />
                     ))}

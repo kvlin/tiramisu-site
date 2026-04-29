@@ -35,9 +35,6 @@ export default async function Page({
             consistency, and the trust of customers who return week after week.
             We never compromise on quality — premium mascarpone, rich espresso,
             and handcrafted layers prepared with care.
-            <span className="block mt-4 text-foreground font-medium">
-              We’re at the Eastwood Night Market every Saturday — come visit and taste it fresh.
-            </span>
           </p>
 
         </div>
