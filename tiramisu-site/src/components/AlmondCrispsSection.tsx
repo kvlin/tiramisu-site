@@ -11,7 +11,7 @@ export default function AlmondCrispsSection({ locale }: Props) {
     const subtitle =
         locale === "cn"
             ? "薄脆香甜，精选杏仁烘焙而成。"
-            : "Thin, crisp and delicately baked with premium almonds.";
+            : "Thin, crisp and delicately baked with almonds.";
 
     const product = {
         name: locale === "cn" ? "杏仁瓦片" : "Almond Crisps",
@@ -23,7 +23,7 @@ export default function AlmondCrispsSection({ locale }: Props) {
     return (
         <section
             id="almond-crisps"
-            className="scroll-mt-24 py-12 sm:py-16 lg:py-20 bg-cream"
+            className="scroll-mt-24 py-12 sm:py-16 lg:py-24 bg-cream"
         >
             <div className="mx-auto max-w-5xl px-8">
 
@@ -43,7 +43,7 @@ export default function AlmondCrispsSection({ locale }: Props) {
                     <div className="w-full max-w-md">
                         <ProductCard
                             {...product}
-                            imageHeight="h-[280px]"
+                            imageHeight="h-[320px]"
                         />
                     </div>
                 </div>

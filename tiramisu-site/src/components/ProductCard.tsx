@@ -26,13 +26,13 @@ export default function ProductCard({
 }: ProductCardProps) {
     return (
         <div className="group rounded-2xl bg-white backdrop-blur-sm 
-        shadow-lg border border-border
-        overflow-hidden transition-all duration-500 
-        hover:shadow-2xl hover:-translate-y-2">
+shadow-lg border border-border
+overflow-hidden transition-all duration-500 
+hover:shadow-2xl hover:-translate-y-2">
 
-            <div className={`relative overflow-hidden ${imageHeight ?? "h-[420px]"}`}>
+            <div className={`relative overflow-hidden ${imageHeight ?? "h-[400px]"}`}>
                 {badge && (
-                    <span className="absolute top-5 left-5 z-10 rounded-full bg-gold px-4 py-1 text-xs font-semibold text-accent-foreground">
+                    <span className="absolute top-4 left-4 z-10 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-accent-foreground">
                         {badge}
                     </span>
                 )}
@@ -46,18 +46,18 @@ export default function ProductCard({
             </div>
 
             {/* Content */}
-            <div className="px-6 py-4">
-                <h3 className="font-display text-2xl font-semibold mb-1">
+            <div className="px-5 py-3">
+                <h3 className="font-display text-xl font-semibold mb-1">
                     {name}
                 </h3>
 
-                <div className="mt-2 min-h-[30px] flex flex-col justify-center">
+                <div className="mt-2 min-h-[28px] flex flex-col justify-center">
                     {prices && prices.length > 0 ? (
-                        <div className="space-y-2">
+                        <div className="space-y-1.5">
                             {prices.map((p, index) => (
                                 <div
                                     key={index}
-                                    className="flex justify-between text-lg"
+                                    className="flex justify-between text-base"
                                 >
                                     <span className="text-sm text-muted-foreground">
                                         {p.label}
@@ -69,7 +69,7 @@ export default function ProductCard({
                             ))}
                         </div>
                     ) : (
-                        <p className="text-xl font-semibold text-left">
+                        <p className="text-lg font-semibold text-left">
                             A${price?.toFixed(2)}
                         </p>
                     )}
