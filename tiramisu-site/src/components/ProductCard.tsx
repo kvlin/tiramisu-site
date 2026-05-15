@@ -47,7 +47,7 @@ hover:shadow-2xl hover:-translate-y-2">
 
             {/* Content */}
             <div className="px-5 py-3">
-                <h3 className="font-display text-lg sm:text-xl font-semibold mb-1">
+                <h3 className="font-display text-xl font-semibold mb-1">
                     {name}
                 </h3>
 
@@ -57,19 +57,19 @@ hover:shadow-2xl hover:-translate-y-2">
                             {prices.map((p, index) => (
                                 <div
                                     key={index}
-                                    className="flex justify-between text-xs sm:text-sm"
+                                    className="flex justify-between text-base"
                                 >
-                                    <span className="text-xs text-muted-foreground">
+                                    <span className="text-sm text-muted-foreground">
                                         {p.label}
                                     </span>
-                                    <span className="font-semibold">
+                                    <span className="font-semibold text-accent">
                                         A${p.value.toFixed(2)}
                                     </span>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <p className="text-sm sm:text-lg font-semibold text-left">
+                        <p className="text-lg font-semibold text-left text-accent">
                             A${price?.toFixed(2)}
                         </p>
                     )}
