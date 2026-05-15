@@ -27,10 +27,10 @@ export default function OrderByEmailSection({ locale }: Props) {
             <div className="mx-auto max-w-4xl px-8">
                 <div className="rounded-[32px] border border-[#e5d6cc] bg-white p-8 md:p-12 shadow-sm">
                     <div className="text-center mb-1">
-                        <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4 ">
+                        <h2 className="font-display text-xl md:text-4xl font-semibold mb-4 ">
                             {title}
                         </h2>
-                        <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+                        <p className="text-muted-foreground max-w-2xl mx-auto text-sm leading-relaxed">
                             {locale === "cn"
                                 ? "通过电子邮件预订您的甜点。"
                                 : "Order your desserts by email."}
@@ -39,8 +39,7 @@ export default function OrderByEmailSection({ locale }: Props) {
                                 ? "发送邮件至 order@littlemisu.com.au "
                                 : "Please send your order to:"}
                         </p>
-                        <br />
-                        <span className="font-bold text-[#7A3E1E] text-2xl">
+                        <span className="font-bold text-[#7A3E1E] text-lg">
                             order@littlemisu.com.au
                         </span>.
                     </div>

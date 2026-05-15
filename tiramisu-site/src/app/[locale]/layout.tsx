@@ -50,7 +50,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
-  const baseUrl = "https://yourdomain.com"; // change later
+  const baseUrl = "https://littlemisu.com.au";
 
   const languages = Object.fromEntries(
     locales.map((loc) => [loc, `${baseUrl}/${loc}`])
@@ -70,13 +70,13 @@ export async function generateMetadata({
 
     title:
       locale === "en"
-        ? "Little Misu | Order Online | Sydney"
-        : "Little Misu | 在线定制 | 悉尼",
+        ? "Little Misu | Sydney"
+        : "Little Misu | 悉尼",
 
     description:
       locale === "en"
-        ? "Authentic Italian tiramisu crafted with premium ingredients"
-        : "传统意大利提拉米苏和各种甜点，精选食材",
+        ? "Fresh handmade tiramisu and desserts available at Sydney markets and festivals. Currently locations in Eastwood, Hornsby, Hurstville and Wolli Creek."
+        : "新鲜手工现做提拉米苏和甜点，每周在不同市集和活动等你来吃！",
   };
 }
 
