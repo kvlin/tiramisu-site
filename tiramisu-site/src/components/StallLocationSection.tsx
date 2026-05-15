@@ -31,10 +31,10 @@ export default function StallLocationSection() {
             <div className="mx-auto max-w-6xl">
                 <div className="mx-auto mb-10 max-w-2xl text-center">
 
-                    <h2 className="text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-stone-900">
                         Find us at local markets
                     </h2>
-                    <p className="mt-4 text-base leading-7 text-stone-600">
+                    <p className="mt-4 text-xs sm:text-sm md:text-base leading-7 text-stone-600">
                         Come say hello and pick up freshly made tiramisu and treats at our
                         weekly and monthly market stalls.
                     </p>
@@ -50,7 +50,7 @@ export default function StallLocationSection() {
                                 <MapPin size={22} />
                             </div>
 
-                            <h3 className="text-xl font-semibold text-stone-900">
+                            <h3 className="text-lg sm:text-xl font-semibold text-stone-900">
                                 {stall.link ? (
                                     <a
                                         href={stall.link}
@@ -65,7 +65,7 @@ export default function StallLocationSection() {
                                 )}
                             </h3>
 
-                            <div className="mt-5 space-y-3 text-sm text-stone-600">
+                            <div className="mt-5 space-y-3 text-xs sm:text-sm text-stone-600">
                                 <div className="flex items-center gap-3">
                                     <CalendarDays size={17} className="text-amber-700" />
                                     <span>{stall.day}</span>
@@ -84,7 +84,7 @@ export default function StallLocationSection() {
                     ))}
                 </div>
 
-                <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-stone-500">
+                <p className="mx-auto mt-8 max-w-2xl text-center text-xs sm:text-sm text-stone-500">
                     Market times may vary due to weather or event updates. Please check the respective market's social media for the latest information.
                 </p>
             </div>
