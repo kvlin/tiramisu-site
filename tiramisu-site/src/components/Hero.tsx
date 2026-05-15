@@ -29,13 +29,13 @@ export default function Hero() {
                     <div className="max-w-xl mt-64 pb-12 sm:pb-0">
 
                         {/* Heading */}
-                        <h1 className="font-display text-6xl md:text-2xl lg:text-8xl font-semibold leading-tight mb-6">
+                        <h1 className="font-display text-4xl md:text-2xl lg:text-8xl font-semibold leading-tight mb-6">
                             Authentic <br />
                             <span className="text-accent">Tiramisu</span>
                         </h1>
 
                         {/* Description */}
-                        <p className="text-muted-foreground text-lg mb-8">
+                        <p className="text-primary text-lg mb-8">
                             Freshly made with care and tradition.
                         </p>
 

@@ -78,11 +78,11 @@ export default function TiramisuSection({ locale }: Props) {
 
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="font-display text-5xl md:text-6xl font-semibold mb-6">
+                    <h2 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold mb-6">
                         {title}
                     </h2>
 
-                    <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                    <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
                         {subtitle}
                     </p>
                 </div>
