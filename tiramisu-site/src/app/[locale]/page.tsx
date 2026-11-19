@@ -3,7 +3,6 @@ import TiramisuSection from "@/components/TiramisuSection";
 import WaferRollSection from "@/components/WaferRollSection";
 import AlmondCrispsSection from "@/components/AlmondCrispsSection";
 import StallLocationSection from "@/components/StallLocationSection";
-import OrderByEmailSection from "@/components/OrderByEmailSection";
 
 export default async function Page({
   params,
@@ -18,7 +17,6 @@ export default async function Page({
       <TiramisuSection locale={locale} />
       <WaferRollSection locale={locale} />
       <AlmondCrispsSection locale={locale} />
-      <OrderByEmailSection locale={locale} />
       <StallLocationSection />
       <section
         id="about"

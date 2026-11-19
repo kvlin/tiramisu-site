@@ -56,14 +56,6 @@ const Header = () => {
                         </li>
                         <li>
                             <a
-                                href="#order-by-email"
-                                className="hover:text-[#5A3E2B] transition-colors duration-200"
-                            >
-                                Order
-                            </a>
-                        </li>
-                        <li>
-                            <a
                                 href="#availability"
                                 className="hover:text-[#5A3E2B] transition-colors duration-200"
                             >
